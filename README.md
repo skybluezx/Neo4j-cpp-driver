@@ -10,7 +10,7 @@ libcurl头文件在api.hpp中被引入，JsonCpp头文件在api.hpp和kit.hpp中
 
 ### database.hpp/cpp
 该模块为驱动的底层模块，主要用于curl的初始化和析构时的清理操作。
-`由于curl的特性，初始化部分使用了单例模式`
+<br/>`由于curl的特性，初始化部分使用了单例模式`
 
 ### api.hpp/cpp
 该模块为驱动的核心部分，主要包括增删改查等各类数据库操作。
