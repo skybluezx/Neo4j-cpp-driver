@@ -22,22 +22,22 @@ libcurl头文件在api.hpp中被引入，JsonCpp头文件在api.hpp和kit.hpp中
 Neo4j在登录验证时使用了Base64编码，该组件用于对数据库连接验证时的密码进行编码处理。
 
 ## 示例
-    try
+    try
     {
-        //使用单例模式获得Neo4j驱动
-        std::shared_ptr<neo4jDriver::Neo4j> neo4j = neo4jDriver::Neo4j::getNeo4j();
-        //利用Neo4j驱动和连接参数生成API对象
-        neo4jDriver::Neo4jAPI neo4jAPI(neo4j, "127.0.0.1", "7474", "neo4j", "123456");
-        //连接数据库
-        neo4jAPI.connectDatabase();
-        
-        //具体的数据库操作
-        ......    
-       
-        //断开数据库连接
-        neo4jAPI.closeDatabase();
-        //清理数据库驱动
-        neo4j->deleteNeo4j();
+        //使用单例模式获得Neo4j驱动
+        std::shared_ptr<neo4jDriver::Neo4j> neo4j = neo4jDriver::Neo4j::getNeo4j();
+        //利用Neo4j驱动和连接参数生成API对象
+        neo4jDriver::Neo4jAPI neo4jAPI(neo4j, "127.0.0.1", "7474", "neo4j", "123456");
+        //连接数据库
+        neo4jAPI.connectDatabase();
+        
+        //具体的数据库操作
+        //......
+        
+        //断开数据库连接
+        neo4jAPI.closeDatabase();
+        //清理数据库驱动
+        neo4j->deleteNeo4j();
     }
     catch (char* e)
     {
