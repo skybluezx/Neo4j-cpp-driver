@@ -46,3 +46,6 @@ Neo4j在登录验证时使用了Base64编码，该组件用于对数据库连接
     
 ## API
 `尚未提供，请参照api.hpp`
+
+## 许可协议
+Neo4j-cpp-driver使用MIT许可证。关于Neo4j-cpp-driver依赖项的协议见对应依赖项的License文件。
